@@ -20,13 +20,16 @@ button {
 }
 `
 
-const Character = props => {
-    const {characters} = props;
-    return(
-        <h1>{props.name}</h1>
-    )
-
+export default function Character({ info, action, details }) {
+    return (
+        <characterStyle>
+          {info.name}
+          <button onClick={() => action(info.id)}>
+            See details
+          </button>
+        </characterStyle>
+      )
 };
-export default Character;
+
 
 
