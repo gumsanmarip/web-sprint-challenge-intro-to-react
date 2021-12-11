@@ -12,7 +12,7 @@ const App = () => {
   // Fetch characters from the API in an effect hook. Remember, anytime you have a 
   // side effect in a component, you want to think about which state and/or props it should
   // sync up with, if any.
-  const [character, setCharacters] = useState([]);
+  const [characters, setCharacters] = useState([]);
   const [currentCharacterId, setCurrentCharacterId] = useState(null);
 
   const openDetails = id => {
@@ -36,7 +36,7 @@ const App = () => {
     <div className="App">
       <h1 className="Header">Characters</h1>
       {
-      character.map((fr) => {
+      characters.map((fr) => {
         return <Character key={fr.id} info={fr} action={openDetails}/>
       })
     }

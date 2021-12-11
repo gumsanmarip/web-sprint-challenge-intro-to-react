@@ -1,18 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-import styled, { keyframes } from 'styled-components';
-
-const kf = keyframes`
-  100% {
-    opacity: 1;
-    transform: scale(1) rotateZ(0);
-  }
-`
+import styled from 'styled-components';
 
 const StyledDetails = styled.div`
   opacity: 0;
   transform: scale(2) rotateZ(180deg);
-  animation: ${kf} 0.5s ease-in-out forwards;
   p {
     color: ${props => props.theme.tertiaryColor};
   }
