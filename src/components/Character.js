@@ -3,7 +3,7 @@ import React from "react";
 import styled from "styled-components";
 
 
-const characterStyle = styled.div`
+const StyledCharacters = styled.div`
 width: 60%;
 display: flex;
 justify-content: space-between;
@@ -20,14 +20,14 @@ button {
 }
 `
 
-export default function Character({ info, action, details }) {
+export default function Character({ info, action }) {
     return (
-        <characterStyle>
+        <StyledCharacters>
           {info.name}
           <button onClick={() => action(info.id)}>
             See details
           </button>
-        </characterStyle>
+        </StyledCharacters>
       )
 };
 

@@ -36,8 +36,8 @@ const App = () => {
     <div className="App">
       <h1 className="Header">Characters</h1>
       {
-      character.map((fr, idx) => {
-        return <Character key={idx} info={fr} action={openDetails}/>
+      character.map((fr) => {
+        return <Character key={fr.id} info={fr} action={openDetails}/>
       })
     }
     {
